@@ -1,0 +1,16 @@
+Codebook for the Coursera Wearables Assignment (Getting and Cleaning Data)
+
+The variables in the output tidy summary data frame are the following:
+
+Activity: one of the following values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+it is obtained by merging the Activities (y_test.txt and y_train.txt) with their labels from activity_labels.txt
+
+Origin: either "train" or "test", depending on whether the observation originated from the test or training data sample
+the variable is set to a constant value in the test and training data sets, before rbind together
+
+Subject: value from 1 to 30, representing the subject of the measurement. a subject is either in the training or the test data set
+it is obtained from subject_test.txt and subject_train.txt which are cbind together with the other data frames
+
+Remaining variables: all remaining variables are mean values per subject and activity for the different measures
+(all variables respresenting either a mean or a standard deviation measure of the originial data sampling)
+the values are obtained by applying the mean function within the aggregate function. aggregate is splitting the dataframe using the Activity, Origin and Subject dimensions. The mean and standard deviation variables are identified through a grep statement: grep("((mean|std)\\()",names(maindata))
