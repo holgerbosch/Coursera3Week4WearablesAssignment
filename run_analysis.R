@@ -39,5 +39,15 @@ traindata$Origin="train"
 maindata=rbind(traindata, testdata)
 selectedVariables=grep("((mean|std)\\()|Activity|Origin|Subject",names(maindata),value=TRUE)
 maindata=maindata[,selectedVariables]
-tidydata=aggregate(x = maindata[,grep("((mean|std)\\()",names(maindata))], by = maindata[,c("Activity","Origin","Subject")], FUN = "mean")
+names(maindata)=gsub("BodyBody","Body", names(maindata))
+names(maindata)=gsub("Gyro","Gyroscope", names(maindata))
+names(maindata)=gsub("Acc","Accelerometer", names(maindata))
+names(maindata)=gsub("Mag","Magnitude", names(maindata))
+names(maindata)=gsub("\\(\\)","", names(maindata))
+names(maindata)=gsub("\\-","", names(maindata))
+names(maindata)=gsub("mean","Mean", names(maindata))
+names(maindata)=gsub("std","Std", names(maindata))
+
+
+tidydata=aggregate(x = maindata[,grep("Mean|Std",names(maindata))], by = maindata[,c("Activity","Origin","Subject")], FUN = "mean")
 write.table(tidydata,"tidydata.txt",row.names=FALSE)
