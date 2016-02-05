@@ -13,4 +13,79 @@ it is obtained from subject_test.txt and subject_train.txt which are cbind toget
 
 Remaining variables: all remaining variables are mean values per subject and activity for the different measures
 (all variables respresenting either a mean or a standard deviation measure of the originial data sampling)
-the values are obtained by applying the mean function within the aggregate function. aggregate is splitting the dataframe using the Activity, Origin and Subject dimensions. The mean and standard deviation variables are identified through a grep statement: grep("((mean|std)\\()",names(maindata))
+the values are obtained by applying the mean function within the aggregate function.
+aggregate is splitting the dataframe using the Activity, Origin and Subject dimensions. 
+The mean and standard deviation variables are identified through a grep statement: grep("((mean|std)\\()",names(maindata))
+t stands for time, f for frequency.
+
+List of variables:
+Activity                           
+Origin                             
+Subject                            
+tBodyAccelerometerMeanX            
+tBodyAccelerometerMeanY            
+tBodyAccelerometerMeanZ            
+tBodyAccelerometerStdX             
+tBodyAccelerometerStdY             
+tBodyAccelerometerStdZ             
+tGravityAccelerometerMeanX         
+tGravityAccelerometerMeanY         
+tGravityAccelerometerMeanZ         
+tGravityAccelerometerStdX          
+tGravityAccelerometerStdY          
+tGravityAccelerometerStdZ          
+tBodyAccelerometerJerkMeanX        
+tBodyAccelerometerJerkMeanY        
+tBodyAccelerometerJerkMeanZ        
+tBodyAccelerometerJerkStdX         
+tBodyAccelerometerJerkStdY         
+tBodyAccelerometerJerkStdZ         
+tBodyGyroscopeMeanX                
+tBodyGyroscopeMeanY                
+tBodyGyroscopeMeanZ                
+tBodyGyroscopeStdX                 
+tBodyGyroscopeStdY                 
+tBodyGyroscopeStdZ                 
+tBodyGyroscopeJerkMeanX            
+tBodyGyroscopeJerkMeanY            
+tBodyGyroscopeJerkMeanZ            
+tBodyGyroscopeJerkStdX             
+tBodyGyroscopeJerkStdY             
+tBodyGyroscopeJerkStdZ             
+tBodyAccelerometerMagnitudeMean    
+tBodyAccelerometerMagnitudeStd     
+tGravityAccelerometerMagnitudeMean 
+tGravityAccelerometerMagnitudeStd  
+tBodyAccelerometerJerkMagnitudeMean
+tBodyAccelerometerJerkMagnitudeStd 
+tBodyGyroscopeMagnitudeMean        
+tBodyGyroscopeMagnitudeStd         
+tBodyGyroscopeJerkMagnitudeMean    
+tBodyGyroscopeJerkMagnitudeStd     
+fBodyAccelerometerMeanX            
+fBodyAccelerometerMeanY            
+fBodyAccelerometerMeanZ            
+fBodyAccelerometerStdX             
+fBodyAccelerometerStdY             
+fBodyAccelerometerStdZ             
+fBodyAccelerometerJerkMeanX        
+fBodyAccelerometerJerkMeanY        
+fBodyAccelerometerJerkMeanZ        
+fBodyAccelerometerJerkStdX         
+fBodyAccelerometerJerkStdY         
+fBodyAccelerometerJerkStdZ         
+fBodyGyroscopeMeanX                
+fBodyGyroscopeMeanY                
+fBodyGyroscopeMeanZ                
+fBodyGyroscopeStdX                 
+fBodyGyroscopeStdY                 
+fBodyGyroscopeStdZ                 
+fBodyAccelerometerMagnitudeMean    
+fBodyAccelerometerMagnitudeStd     
+fBodyAccelerometerJerkMagnitudeMean
+fBodyAccelerometerJerkMagnitudeStd 
+fBodyGyroscopeMagnitudeMean        
+fBodyGyroscopeMagnitudeStd         
+fBodyGyroscopeJerkMagnitudeMean    
+fBodyGyroscopeJerkMagnitudeStd     
+
